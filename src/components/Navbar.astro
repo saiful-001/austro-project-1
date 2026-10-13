@@ -1,9 +1,16 @@
 ---
-const links = [['Work','#work'],['Services','#services'],['Studio','#studio'],['Insights','#insights']];
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const links = [
+  ['Work', `${base}/#work`],
+  ['About', `${base}/about`],
+  ['Services', `${base}/#services`],
+  ['Studio', `${base}/#studio`],
+  ['Insights', `${base}/#insights`]
+];
 ---
 <header class="nav"><div class="wrap nav-in">
-  <a class="logo" href="#top" aria-label="FORM/FWD home">FORM<span>/</span>FWD</a>
+  <a class="logo" href={`${base}/`} aria-label="FORM/FWD home">FORM<span>/</span>FWD</a>
   <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="Toggle menu"><i></i><i></i></button>
   <nav id="menu" aria-label="Primary"><ul>{links.map(([t,h])=><li><a class="ul" href={h}>{t}</a></li>)}</ul>
-  <a class="btn btn-sm" href="#contact">Start a Project</a></nav>
+  <a class="btn btn-sm" href={`${base}/#contact`}>Start a Project</a></nav>
 </div></header>

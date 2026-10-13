@@ -14,4 +14,11 @@ export const img = {
   j1: u('photo-1586023492125-27b2c045efd7', 900),
   j2: u('photo-1618221195710-dd6b41faaea6', 900),
   j3: u('photo-1522202176988-66273c2fd55f', 900),
+  team1: u('photo-1534528741775-53994a69daeb', 800),
+  team2: u('photo-1507003211169-0a1dd7228f2d', 800),
+  team3: u('photo-1519085360753-af0119f7cbe7', 800),
+  team4: u('photo-1573496359142-b8d87734a5a2', 800),
+  studioCraft: u('photo-1507679799987-c73779587ccf', 1200),
+  studioPress: u('photo-1513542789411-b6a5d4f31634', 800),
+  studioArchive: u('photo-1524758631624-e2822e304c36', 800),
 };

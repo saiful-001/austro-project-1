@@ -1,0 +1,977 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import { img } from '../data/images';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const principles = [
+  {
+    num: '01',
+    title: 'Radical Tension',
+    tagline: 'Friction creates memorability.',
+    desc: 'Harmonious things blend into the background. The brands that define decades live inside deliberate contrast — elegance meeting grit, raw geometry meeting warm humanity.'
+  },
+  {
+    num: '02',
+    title: 'Structure > Styling',
+    tagline: 'Decoration rots; clarity endures.',
+    desc: 'We treat typography and layout like architectural steel, not cosmetic paint. If the bones of the concept cannot survive in pure black and white, we rebuild from zero.'
+  },
+  {
+    num: '03',
+    title: 'No Telephone Games',
+    tagline: 'Direct dialogue with the craftspeople.',
+    desc: 'You collaborate directly with the partners and designers who physically build the work. No account executives translating your ambitions into sanitized corporate jargon.'
+  },
+  {
+    num: '04',
+    title: 'The 10-Year Shelf Life',
+    tagline: 'Built against algorithmic fads.',
+    desc: 'We consciously ignore transient design trends. Every typeface chosen, grid engineered, and tone formulated is measured by whether it will command respect in 2036.'
+  }
+];
+
+const comparisons = [
+  {
+    typical: '80-page strategy decks filled with corporate filler',
+    forward: 'Tactile, live interactive prototypes delivered in week one'
+  },
+  {
+    typical: 'Junior teams executing while partners only pitch',
+    forward: 'Founding partners in Figma and code every single afternoon'
+  },
+  {
+    typical: 'Compromised options designed to appease committees',
+    forward: 'One razor-sharp vision with the spine to dominate a category'
+  },
+  {
+    typical: 'Static PDF guidelines that gather dust in cloud drives',
+    forward: 'Living, production-ready design systems and code tokens'
+  }
+];
+
+const team = [
+  {
+    name: 'Elena Vance',
+    role: 'Founding Partner & Creative Director',
+    focus: 'Typographic Identity & Editorial Direction',
+    image: img.team1,
+    quote: 'If a brand is universally liked on day one, it lacks personality.'
+  },
+  {
+    name: 'Kaito Tanaka',
+    role: 'Partner, Spatial & Creative Code',
+    focus: 'Micro-Kinetics & Interactive Architecture',
+    image: img.team2,
+    quote: 'Code is our chisel; motion is the punctuation mark.'
+  },
+  {
+    name: 'Marcus Thorne',
+    role: 'Principal, Brand Narrative & Strategy',
+    focus: 'Verbal Positioning & Cultural Architecture',
+    image: img.team3,
+    quote: 'Sharp language separates industry leaders from mere vendors.'
+  },
+  {
+    name: 'Aria Sterling',
+    role: 'Design Director',
+    focus: 'Sensory Art Direction & Packaging',
+    image: img.team4,
+    quote: 'Sweat the microscopic details. That is where luxury lives.'
+  }
+];
+
+const stats = [
+  { number: '14', label: 'International Honors', note: 'D&AD, Type Directors Club, Awwwards SOTD' },
+  { number: '100%', label: 'Independent & Partner-Led', note: 'Zero external investors or holding group bloat' },
+  { number: '38+', label: 'Global Identities Launched', note: 'From Berlin and Tokyo to NYC and London' },
+  { number: '00', label: 'Boring Compromises', note: 'We only take 6 flagship commissions each year' }
+];
+---
+
+<PageLayout
+  title="About the Studio — FORM/FWD Creative Laboratory"
+  description="We do not make wallpaper. FORM/FWD is an independent creative studio building cultural gravity and uncompromising digital architecture."
+>
+  <!-- HERO SECTION -->
+  <section class="sec about-hero">
+    <div class="wrap">
+      <div class="hero-top rv">
+        <div class="label">
+          <span class="dot"></span>
+          <span>STUDIO MANIFESTO · EST. 2021 · INDEPENDENT</span>
+        </div>
+        <div class="coordinates">
+          <span>52.5200° N, 13.4050° E</span>
+          <span class="sep">/</span>
+          <span>BERLIN · TOKYO · REMOTE</span>
+        </div>
+      </div>
+
+      <div class="hero-headline rv">
+        <h1>We do not make <em>wallpaper</em>.<br />We craft cultural gravity.</h1>
+      </div>
+
+      <div class="hero-split rv">
+        <div class="hero-manifesto-text">
+          <p class="lead-quote">
+            "Most agencies exist to smooth down edges until everyone in the boardroom feels safe. We exist for the opposite: to give pioneering ventures an unmistakable spine."
+          </p>
+          <p class="hero-subtext">
+            FORM/FWD is an independent creative laboratory operating at the intersection of rigorous typography, brutalist discipline, and tactile digital execution. We partner exclusively with founders and brands who refuse the comfort of the beige consensus.
+          </p>
+          <div class="hero-badges">
+            <span class="badge">Strictly Partner-Led</span>
+            <span class="badge">6 Projects / Year</span>
+            <span class="badge">Zero Fluff</span>
+          </div>
+        </div>
+
+        <div class="hero-visual-frame">
+          <div class="image-wrapper">
+            <img
+              src={img.studioCraft}
+              alt="Artisans reviewing bespoke typographic prints in studio"
+              width="1200"
+              height="800"
+              loading="eager"
+            />
+            <div class="visual-badge">
+              <span class="pulse"></span>
+              <span>LIVE IN STUDIO</span>
+            </div>
+            <div class="corner-label">FIGURE 01 // MATERIAL CRAFT</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NUMERICAL PROOF / BRUTALIST METRICS -->
+  <section class="stats-strip">
+    <div class="wrap">
+      <div class="stats-grid">
+        {stats.map((item) => (
+          <div class="stat-cell rv">
+            <div class="stat-num">{item.number}</div>
+            <div class="stat-label">{item.label}</div>
+            <div class="stat-note">{item.note}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- THE MANIFESTO / 4 PILLARS -->
+  <section class="sec wrap manifesto-sec">
+    <div class="sec-header rv">
+      <div class="label">
+        <span class="dot"></span>
+        <span>OUR PHILOSOPHY</span>
+      </div>
+      <h2>Four non-negotiable <em>laws</em> of our practice.</h2>
+      <p class="lede">How we think, challenge assumptions, and protect work from becoming ordinary.</p>
+    </div>
+
+    <div class="principles-grid">
+      {principles.map((item) => (
+        <article class="principle-card rv">
+          <div class="card-num">{item.num}</div>
+          <div class="card-body">
+            <h3>{item.title}</h3>
+            <p class="tagline">{item.tagline}</p>
+            <p class="desc">{item.desc}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <!-- CONTRAST: THE CONVENTIONAL WAY VS FORM/FWD -->
+  <section class="contrast-sec">
+    <div class="wrap">
+      <div class="sec-header rv text-center">
+        <div class="label justify-center">
+          <span class="dot"></span>
+          <span>THE DICHOTOMY</span>
+        </div>
+        <h2>The conventional route vs. <em>FORM/FWD</em>.</h2>
+        <p class="lede mx-auto">Why discerning leaders choose us over the traditional holding-company machinery.</p>
+      </div>
+
+      <div class="comparison-table rv">
+        <div class="comp-col comp-old">
+          <div class="col-head">
+            <span class="cross">✕</span>
+            <h3>The Typical Agency Pattern</h3>
+          </div>
+          <ul>
+            {comparisons.map((row) => (
+              <li>
+                <span class="bullet">―</span>
+                <span class="text">{row.typical}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="comp-col comp-new">
+          <div class="col-head">
+            <span class="check">✓</span>
+            <h3>The FORM/FWD Doctrine</h3>
+          </div>
+          <ul>
+            {comparisons.map((row) => (
+              <li>
+                <span class="bullet">→</span>
+                <span class="text">{row.forward}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE COLLECTIVE / TEAM -->
+  <section class="sec wrap team-sec">
+    <div class="sec-header rv">
+      <div class="label">
+        <span class="dot"></span>
+        <span>THE MAKERS</span>
+      </div>
+      <h2>The obsessives behind the <em>output</em>.</h2>
+      <p class="lede">No anonymous tiers. The practitioners named here are the ones who touch your project.</p>
+    </div>
+
+    <div class="team-grid">
+      {team.map((person) => (
+        <div class="team-card rv">
+          <div class="photo-frame">
+            <img src={person.image} alt={person.name} width="800" height="960" loading="lazy" />
+            <div class="discipline-tag">{person.focus}</div>
+          </div>
+          <div class="team-info">
+            <div class="team-name-row">
+              <h3>{person.name}</h3>
+            </div>
+            <p class="team-role">{person.role}</p>
+            <blockquote class="team-quote">"{person.quote}"</blockquote>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- STUDIO ARTIFACTS / VISUAL ARCHIVE -->
+  <section class="sec artifacts-sec">
+    <div class="wrap">
+      <div class="sec-header rv">
+        <div class="label">
+          <span class="dot"></span>
+          <span>PHYSICAL & DIGITAL DIARY</span>
+        </div>
+        <h2>Inside the studio <em>laboratory</em>.</h2>
+      </div>
+
+      <div class="artifacts-mosaic rv">
+        <figure class="mosaic-item m1">
+          <img src={img.about} alt="Studio working tables" width="1200" height="800" loading="lazy" />
+          <figcaption>
+            <span>ARCHIVE // 01</span>
+            <strong>Tactile brand collateral & material tests</strong>
+          </figcaption>
+        </figure>
+
+        <figure class="mosaic-item m2">
+          <img src={img.studioPress} alt="Typographic proofs and ink prints" width="800" height="600" loading="lazy" />
+          <figcaption>
+            <span>ARCHIVE // 02</span>
+            <strong>Custom serif type geometry in print</strong>
+          </figcaption>
+        </figure>
+
+        <figure class="mosaic-item m3">
+          <img src={img.studioArchive} alt="Architecture and space references" width="800" height="600" loading="lazy" />
+          <figcaption>
+            <span>ARCHIVE // 03</span>
+            <strong>Spatial lighting & minimal materiality</strong>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAGNETIC INVITATION / ABOUT CTA -->
+  <section class="sec about-cta-wrap">
+    <div class="wrap">
+      <div class="about-cta-card rv">
+        <div class="cta-inner">
+          <div class="label dark-label">
+            <span class="dot"></span>
+            <span>NEXT COHORT: ACCEPTING Q3 / Q4 COMMISSIONS</span>
+          </div>
+          <h2>Ready to build something the industry <em>cannot ignore</em>?</h2>
+          <p class="cta-body">
+            We partner with visionary teams seeking brand identity, bespoke web architecture, or total creative repositioning.
+          </p>
+          <div class="cta-actions">
+            <a class="btn btn-lime" href={`${base}/#contact`}>Initiate a Dialogue →</a>
+            <a class="btn btn-ghost light-ghost" href={`${base}/#work`}>Inspect Past Work</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</PageLayout>
+
+<style>
+  /* ==========================================================
+     ABOUT US - EDITORIAL / BRUTALIST BESPOKE STYLING
+     ========================================================== */
+
+  .about-hero {
+    padding-top: clamp(2rem, 5vw, 4.5rem);
+    padding-bottom: clamp(3rem, 7vw, 6rem);
+  }
+
+  .hero-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--gray);
+    margin-bottom: clamp(2rem, 4vw, 3.5rem);
+  }
+
+  .coordinates {
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    opacity: 0.65;
+    text-transform: uppercase;
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .coordinates .sep {
+    opacity: 0.3;
+  }
+
+  .hero-headline h1 {
+    font-size: clamp(2.8rem, 7vw, 6.5rem);
+    line-height: 0.98;
+    letter-spacing: -0.03em;
+    margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
+    max-width: 22ch;
+  }
+
+  .hero-headline h1 em {
+    font-style: italic;
+    color: #5c7d12;
+  }
+
+  .hero-split {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: clamp(2rem, 5vw, 5rem);
+    align-items: center;
+  }
+
+  .lead-quote {
+    font-family: var(--serif);
+    font-size: clamp(1.4rem, 2.8vw, 2.1rem);
+    line-height: 1.25;
+    color: var(--ink);
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+    border-left: 2px solid var(--ink);
+  }
+
+  .hero-subtext {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    opacity: 0.85;
+    max-width: 38rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .badge {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    background: var(--gray);
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  .hero-visual-frame {
+    position: relative;
+  }
+
+  .image-wrapper {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    background: var(--gray);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  }
+
+  .image-wrapper img {
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    transition: transform 1.2s var(--ease);
+  }
+
+  .image-wrapper:hover img {
+    transform: scale(1.04);
+  }
+
+  .visual-badge {
+    position: absolute;
+    top: 1.2rem;
+    left: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(23, 23, 23, 0.85);
+    backdrop-filter: blur(8px);
+    color: var(--ivory);
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    padding: 0.4rem 0.85rem;
+    border-radius: 999px;
+    font-weight: 500;
+  }
+
+  .pulse {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--lime);
+    box-shadow: 0 0 8px var(--lime);
+    animation: blink 2s infinite ease-in-out;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  .corner-label {
+    position: absolute;
+    bottom: 1.2rem;
+    right: 1.2rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    background: var(--lime);
+    color: var(--ink);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+
+  /* --- STATS STRIP --- */
+  .stats-strip {
+    background: var(--ink);
+    color: var(--ivory);
+    padding-block: clamp(3rem, 6vw, 4.5rem);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  .stat-cell {
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+    padding-left: 1.5rem;
+  }
+
+  .stat-num {
+    font-family: var(--serif);
+    font-size: clamp(3rem, 6vw, 5rem);
+    line-height: 0.9;
+    color: var(--lime);
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .stat-note {
+    font-size: 0.8rem;
+    opacity: 0.6;
+    line-height: 1.4;
+  }
+
+  /* --- MANIFESTO SECTION --- */
+  .manifesto-sec {
+    padding-block: clamp(4rem, 8vw, 7rem);
+  }
+
+  .principles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .principle-card {
+    background: #f0ece3;
+    border: 1px solid var(--gray);
+    border-radius: 12px;
+    padding: clamp(2rem, 4vw, 3rem);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.4s var(--ease), background 0.3s;
+  }
+
+  .principle-card:hover {
+    transform: translateY(-4px);
+    background: #eae5da;
+    border-color: var(--ink);
+  }
+
+  .card-num {
+    font-family: var(--serif);
+    font-size: 2.2rem;
+    color: var(--ink);
+    opacity: 0.35;
+    margin-bottom: 1.5rem;
+  }
+
+  .principle-card h3 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.05;
+  }
+
+  .principle-card .tagline {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #5c7d12;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 1rem;
+  }
+
+  .principle-card .desc {
+    font-size: 1rem;
+    line-height: 1.65;
+    opacity: 0.85;
+  }
+
+  /* --- CONTRAST / COMPARISON SECTION --- */
+  .contrast-sec {
+    background: #0f0f0f;
+    color: var(--ivory);
+    padding-block: clamp(4rem, 9vw, 8rem);
+  }
+
+  .contrast-sec .label {
+    color: var(--lime);
+  }
+
+  .contrast-sec h2 {
+    color: var(--ivory);
+  }
+
+  .contrast-sec h2 em {
+    color: var(--lime);
+  }
+
+  .contrast-sec .lede {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .justify-center {
+    justify-content: center;
+  }
+
+  .mx-auto {
+    margin-inline: auto;
+  }
+
+  .comparison-table {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: clamp(2.5rem, 5vw, 4.5rem);
+  }
+
+  .comp-col {
+    border-radius: 14px;
+    padding: clamp(2rem, 4vw, 3rem);
+  }
+
+  .comp-old {
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .comp-new {
+    background: #171d10;
+    border: 1px solid rgba(200, 241, 105, 0.3);
+    position: relative;
+  }
+
+  .comp-col .col-head {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 2rem;
+  }
+
+  .cross {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(255, 100, 100, 0.15);
+    color: #ff7b7b;
+    display: grid;
+    place-items: center;
+    font-weight: bold;
+    font-size: 0.85rem;
+  }
+
+  .check {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(200, 241, 105, 0.2);
+    color: var(--lime);
+    display: grid;
+    place-items: center;
+    font-weight: bold;
+    font-size: 0.85rem;
+  }
+
+  .comp-col h3 {
+    font-size: 1.5rem;
+  }
+
+  .comp-old h3 {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .comp-new h3 {
+    color: var(--lime);
+  }
+
+  .comp-col ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  .comp-col li {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.02rem;
+    line-height: 1.5;
+  }
+
+  .comp-old li {
+    color: rgba(255, 255, 255, 0.55);
+    text-decoration: line-through;
+    text-decoration-color: rgba(255, 120, 120, 0.4);
+  }
+
+  .comp-new li {
+    color: var(--ivory);
+    font-weight: 500;
+  }
+
+  .comp-new .bullet {
+    color: var(--lime);
+    font-weight: bold;
+  }
+
+  /* --- TEAM / MAKERS SECTION --- */
+  .team-sec {
+    padding-block: clamp(4rem, 8vw, 7rem);
+  }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 3.5rem;
+  }
+
+  .team-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .photo-frame {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--gray);
+    aspect-ratio: 4/5;
+  }
+
+  .photo-frame img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: grayscale(30%);
+    transition: filter 0.5s var(--ease), transform 0.8s var(--ease);
+  }
+
+  .team-card:hover .photo-frame img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+  }
+
+  .discipline-tag {
+    position: absolute;
+    bottom: 0.8rem;
+    left: 0.8rem;
+    right: 0.8rem;
+    background: rgba(23, 23, 23, 0.85);
+    backdrop-filter: blur(6px);
+    color: var(--ivory);
+    font-size: 0.7rem;
+    padding: 0.4rem 0.6rem;
+    border-radius: 4px;
+    text-align: center;
+    letter-spacing: 0.04em;
+  }
+
+  .team-info {
+    padding-top: 1.2rem;
+  }
+
+  .team-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .team-role {
+    font-size: 0.82rem;
+    color: #5c7d12;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.8rem;
+  }
+
+  .team-quote {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    font-style: italic;
+    line-height: 1.35;
+    opacity: 0.75;
+  }
+
+  /* --- ARTIFACTS MOSAIC --- */
+  .artifacts-sec {
+    background: var(--gray);
+    padding-block: clamp(4rem, 8vw, 6.5rem);
+  }
+
+  .artifacts-mosaic {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-rows: auto auto;
+    gap: 2rem;
+    margin-top: 2.5rem;
+  }
+
+  .mosaic-item {
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--ivory);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  }
+
+  .mosaic-item.m1 {
+    grid-row: span 2;
+  }
+
+  .mosaic-item img {
+    width: 100%;
+    height: 100%;
+    max-height: 520px;
+    object-fit: cover;
+    transition: transform 0.8s var(--ease);
+  }
+
+  .mosaic-item:hover img {
+    transform: scale(1.03);
+  }
+
+  .mosaic-item figcaption {
+    padding: 1.2rem 1.5rem;
+    background: var(--ivory);
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    border-top: 1px solid var(--gray);
+  }
+
+  .mosaic-item figcaption span {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    opacity: 0.6;
+    text-transform: uppercase;
+  }
+
+  .mosaic-item figcaption strong {
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  /* --- ABOUT CTA CARD --- */
+  .about-cta-wrap {
+    padding-block: clamp(3rem, 6vw, 6rem);
+  }
+
+  .about-cta-card {
+    background: var(--ink);
+    color: var(--ivory);
+    border-radius: 20px;
+    padding: clamp(3rem, 7vw, 6rem) clamp(1.5rem, 5vw, 5rem);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about-cta-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(200, 241, 105, 0.08) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .cta-inner {
+    max-width: 46rem;
+    margin-inline: auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  .dark-label {
+    justify-content: center;
+    color: var(--lime);
+  }
+
+  .about-cta-card h2 {
+    font-size: clamp(2.2rem, 5.5vw, 4.2rem);
+    line-height: 1.05;
+    margin-block: 1.2rem;
+  }
+
+  .about-cta-card h2 em {
+    color: var(--lime);
+    font-style: italic;
+  }
+
+  .cta-body {
+    font-size: 1.15rem;
+    opacity: 0.85;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+  }
+
+  .cta-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .light-ghost {
+    color: var(--ivory);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .light-ghost:hover {
+    background: var(--ivory);
+    color: var(--ink);
+  }
+
+  /* ==========================================================
+     RESPONSIVE BREAKPOINTS
+     ========================================================== */
+
+  @media (max-width: 1024px) {
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    .team-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem;
+    }
+
+    .comparison-table {
+      grid-template-columns: 1fr;
+    }
+
+    .artifacts-mosaic {
+      grid-template-columns: 1fr;
+    }
+
+    .mosaic-item.m1 {
+      grid-row: auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-split {
+      grid-template-columns: 1fr;
+    }
+
+    .principles-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .team-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-top {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>
+

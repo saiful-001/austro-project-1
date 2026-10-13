@@ -1,8 +1,9 @@
 ---
 const year = new Date().getFullYear();
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
-<footer class="foot"><div class="wrap fi"><a class="logo" href="#top">FORM<span>/</span>FWD</a>
-<nav aria-label="Footer"><a href="#work">Work</a><a href="#services">Services</a><a href="#studio">Studio</a><a href="#insights">Insights</a></nav>
+<footer class="foot"><div class="wrap fi"><a class="logo" href={`${base}/`}>FORM<span>/</span>FWD</a>
+<nav aria-label="Footer"><a href={`${base}/#work`}>Work</a><a href={`${base}/about`}>About</a><a href={`${base}/#services`}>Services</a><a href={`${base}/#studio`}>Studio</a><a href={`${base}/#insights`}>Insights</a></nav>
 <p>hello@example.com · +00 000 000 000 (placeholders)</p>
 <p class="soc"><a href="#">Instagram</a> <a href="#">LinkedIn</a> <a href="#">Behance</a> <small>(placeholder links)</small></p>
 <p>© {year} FORM/FWD — fictional concept. <a class="ul" href="#top">Back to top ↑</a></p></div></footer>
