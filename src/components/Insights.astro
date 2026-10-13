@@ -1,0 +1,6 @@
+---
+import { img } from '../data/images';
+const J=[['Brand','Why restraint is the loudest move','Notes on using less to say more.',img.j1,'Minimal interior with soft daylight','4/5','a'],['Process','Moodboards that actually decide things','Turning references into direction.',img.j2,'Styled interior with layered textures','1/1','b'],['Culture','Working in the open','Collaboration habits for creative teams.',img.j3,'Group of people collaborating at a table','4/3','c']];
+---
+<section id="insights" class="sec wrap"><header class="sh rv"><p class="label">Insights</p><h2>From the <em>journal</em>.</h2><p class="note">Sample articles for layout demonstration.</p></header>
+<div class="jr">{J.map(([c,t,d,s,a,r,k])=><article class={`ar ${k} rv`}><a href="#contact"><div class="ph" style={`aspect-ratio:${r}`}><img src={s} alt={a} width="900" height="900" loading="lazy" onerror="this.style.display='none'" /></div><p class="cat">{c}</p><h3>{t}</h3><p>{d}</p></a></article>)}</div></section>

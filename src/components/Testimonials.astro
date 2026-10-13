@@ -1,0 +1,6 @@
+---
+const T=[['“Sample testimonial: the team made a complicated brief feel simple.”','Sample client, Fictional Co.'],['“Sample testimonial: bold ideas, calm delivery.”','Sample client, Example Studio'],['“Sample testimonial: our launch finally looked like us.”','Sample client, Demo Brand']];
+---
+<section class="sec wrap tst" aria-roledescription="carousel" aria-label="Sample testimonials"><p class="label rv">Kind words (sample content)</p>
+<div class="slides" aria-live="polite">{T.map(([q,a],i)=><figure class="slide" hidden={i>0}><blockquote>{q}</blockquote><figcaption>{a}</figcaption></figure>)}</div>
+<div class="ctrl"><button class="btn btn-ghost btn-sm" data-dir="-1" aria-label="Previous testimonial">←</button><button class="btn btn-ghost btn-sm" data-dir="1" aria-label="Next testimonial">→</button></div></section>

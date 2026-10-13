@@ -1,0 +1,4 @@
+---
+const brands = ['MORROW','soleil','FORMA','Good Ritual','PARALLEL','Sunday Supply'];
+---
+<section class="marquee" aria-label="Sample fictional brands"><div class="track">{[0,1].map(i=><ul aria-hidden={i?'true':undefined}>{brands.map(b=><li>{b}</li>)}</ul>)}</div></section>

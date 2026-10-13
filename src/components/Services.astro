@@ -1,0 +1,5 @@
+---
+const S=[['Brand Strategy','Positioning, voice and a clear point of view — the foundation every decision comes back to.'],['Visual Identity','Logos, type, colour and systems that stay recognisable from a favicon to a billboard.'],['Web Design & Development','Fast, accessible, expressive websites built with modern tooling.'],['Digital Experiences','Interactive launches, microsites and product moments.'],['Creative Campaigns','Concept, art direction and production across photo, film and social.'],['Motion Design','Titles, brand motion and interface animation with purpose.']];
+---
+<section id="services" class="sec wrap"><header class="sh rv"><p class="label">Services</p><h2>What we <em>do</em>.</h2></header>
+<div class="rows">{S.map(([t,d],i)=><details class="row rv" open={i===0}><summary><span class="n">0{i+1}</span><span class="t">{t}</span><span class="pl" aria-hidden="true">+</span></summary><p>{d}</p></details>)}</div></section>

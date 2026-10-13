@@ -1,0 +1,19 @@
+---
+import '../styles/global.css';
+import '../styles/animations.css';
+const { title = 'FORM/FWD — Creative Studio', description = 'FORM/FWD is a fictional creative studio concept: brand, web and campaigns.' } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title><meta name="description" content={description} />
+  <meta property="og:title" content={title} /><meta property="og:description" content={description} /><meta property="og:type" content="website" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <script is:inline>document.documentElement.classList.add('js')</script>
+</head>
+<body id="top"><a class="skip" href="#main">Skip to content</a><slot />
+<script>import '../scripts/interactions';</script></body></html>

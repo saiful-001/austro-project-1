@@ -1,0 +1,8 @@
+---
+import { img } from '../data/images';
+const email = import.meta.env.PUBLIC_CONTACT_EMAIL ?? 'hello@example.com';
+---
+<section id="contact" class="cta-sec"><div class="wrap cta-in">
+  <div class="rv"><p class="label">Next step</p><h2>Have a Good Idea? <em>Let's Make It Real.</em></h2><p class="lede">Send a short note about your project. We'll reply with questions, not a sales pitch.</p>
+  <a class="btn btn-lime" href={`mailto:${email}`}>Email {email}</a><p class="note">Placeholder address — set PUBLIC_CONTACT_EMAIL.</p></div>
+  <figure class="c-img rv"><img src={img.contact} width="1400" height="1000" loading="lazy" alt="Designer sketching ideas on paper in a studio" onerror="this.style.display='none'" /></figure></div></section>

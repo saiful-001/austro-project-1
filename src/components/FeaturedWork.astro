@@ -1,0 +1,14 @@
+---
+import ProjectCard from './ProjectCard.astro';
+import { img } from '../data/images';
+const P = [
+ {cls:'c1',title:'Forma Living',cat:'Architecture & lifestyle editorial',desc:'A quiet, light-led editorial system for a residential studio.',svc:'Art direction · Editorial · Web',src:img.forma,alt:'Modern house with large windows at dusk',w:1600,h:900,pos:'50% 50%',href:'#contact'},
+ {cls:'c2',title:'Soleil Skin',cat:'Skincare packaging',desc:'Warm, tactile packaging and campaign imagery.',svc:'Identity · Packaging',src:img.soleil,alt:'Skincare products arranged on a neutral surface',w:900,h:1200,pos:'50% 40%',href:'#contact'},
+ {cls:'c3',title:'Morrow Objects',cat:'Furniture & product identity',desc:'Identity built around form, shadow and material.',svc:'Identity · Photography',src:img.morrow,alt:'Designer chair in a minimal interior',w:900,h:1200,pos:'50% 60%',href:'#contact'},
+ {cls:'c4',title:'Good Ritual',cat:'Beverage branding',desc:'A small-batch drinks brand with a confident shelf presence.',svc:'Naming · Packaging',src:img.ritual,alt:'Glass bottle product still life',w:1200,h:900,pos:'50% 50%',href:'#contact'},
+ {cls:'c5',title:'Parallel Studio',cat:'Digital product & website',desc:'A product site that feels as precise as the tool behind it.',svc:'UX · Web design & dev',src:img.parallel,alt:'Designer working on a website layout at a desk',w:1200,h:900,pos:'50% 50%',href:'#contact'},
+ {cls:'c6',title:'Sunday Supply',cat:'Fashion & lifestyle campaign',desc:'Campaign imagery and motion for a relaxed apparel label.',svc:'Campaign · Motion',src:img.sunday,alt:'Folded garments on a shelf in a clothing store',w:900,h:1200,pos:'50% 50%',href:'#contact'},
+];
+---
+<section id="work" class="sec wrap"><header class="sh rv"><p class="label">Selected work</p><h2>Sample projects, <em>fictional</em> clients.</h2><p class="note">Illustrative concepts only — not real client work.</p></header>
+<div class="grid">{P.map(p=><ProjectCard p={p} />)}</div></section>

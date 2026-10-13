@@ -1,0 +1,9 @@
+---
+const { p } = Astro.props;
+---
+<article class={`card ${p.cls} rv`}>
+  <a href={p.href} aria-label={`${p.title} — sample concept`}>
+    <div class="ph"><img src={p.src} alt={p.alt} width={p.w} height={p.h} loading="lazy" style={`object-position:${p.pos}`} onerror="this.style.display='none'" /><span class="arrow" aria-hidden="true">↗</span></div>
+    <div class="meta"><h3>{p.title}</h3><p class="cat">{p.cat}</p><p>{p.desc}</p><p class="svc">{p.svc}</p></div>
+  </a>
+</article>
